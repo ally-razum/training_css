@@ -15,10 +15,15 @@
 
 
 .cards {
+    position: relative;
+    top: 0;
+    left: 0;
     display: grid; /* Применяется к контейнеру, чтобы активировать Grid Layout для его дочерних элементов. */
     grid-template-columns: repeat(3, 1fr); /* Три равные колонки */
     grid-template-rows: 100px 200px; /* 2 строки: 100px и 200px высоты */
     grid-template-columns: 1fr 2fr; /* 2 столбца: первый занимает 1 часть, второй 2 части свободного пространства */
+    border: 2px solid black;
+    margin: 20px;
 }
 
 /* В CSS Grid можно использовать именованные области (grid-template-areas), чтобы удобно описывать расположение элементов на странице. */
@@ -33,7 +38,10 @@
     gap: 10px;
   }
   
-  .header { grid-area: header; background: lightblue; }
+  .header { 
+    grid-area: header; 
+    background: lightblue; 
+}
   .sidebar { grid-area: sidebar; background: lightgray; }
   .content { grid-area: content; background: white; }
   .footer { grid-area: footer; background: lightgreen; }
@@ -43,4 +51,35 @@
     border: 1px solid black;
   }
   
-  
+  #no_8 {
+    position: absolute;
+    top: 500px;
+    left: 200px;
+    background-color: yellowgreen !important;
+    z-index: 10;
+  }
+  /* Для того чтобы элемент с position: sticky начал прилипать, нужно указать одно из свойств top, bottom, left, или right. Например: */
+  /*  будет "прилипать" относительно первого ближайшего родительского элемента с любым из следующих свойств позиционирования:
+
+    position: relative
+    position: absolute
+    position: fixed 
+    .cards {
+    position: relative;
+    } поэтому относительно его
+    */
+
+  #no_7 {
+    position: sticky;
+    top: 0; 
+    background-color: sandybrown;
+  }
+  #no_4 {
+    position: fixed;
+    background-color: palevioletred;
+    top: 60px;
+    right: 50px;
+  }
+  img {
+    width: 90%;
+  }
