@@ -132,3 +132,30 @@
   .half-transparent {
     opacity: 0.5; /* Элемент становится полупрозрачным */
   }
+
+  .object-position {
+    width: 600px;
+    height: auto;
+    border-radius: 10px; /* Скругляет углы изображения на 10 пикселей */
+    object-position: center; /* Центрирует изображение внутри контейнера */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Добавляет тень вокруг изображения */
+    border: 2px solid black; /* Чёрная граница шириной 2 пикселя */
+}
+
+@keyframes example {
+    0% { background-color: #ea00ff; left: 0; }
+    50% { background-color: #6274c5; left: 50px; }
+    100% { background-color: #008000; left: 100px; }
+  }
+
+  .element {
+    animation-name: example; /* Имя анимации, определённое в @keyframes */
+    width: 500px;
+    height: 200px;
+    animation-duration: 5s; /* Длительность анимации — 3 секунды */
+    animation-timing-function: ease-in-out; /* Плавное начало и окончание анимации */
+    animation-iteration-count: infinite; /* Анимация повторяется бесконечно */
+    animation-direction: alternate; /* Анимация будет чередоваться в обоих направлениях */
+  }
+
+  /*   animation: example 3s ease-in-out 1s infinite alternate; /* Сокращенная запись */
