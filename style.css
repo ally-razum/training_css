@@ -80,6 +80,16 @@
     top: 60px;
     right: 50px;
   }
-  img {
-    width: 90%;
+
+  .float_1 {
+    width: 60%;
+    float: left; /* Элемент "плавает" слева */
   }
+
+  .float_2 {
+    width: 20%;
+    float: right; /* Элемент "плавает" справа */
+  }
+  .clearfix {
+    clear: both; /* Очистка всех плавающих элементов */
+}
