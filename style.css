@@ -1,0 +1,46 @@
+/* Reset and base styles  */
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+.cards div {
+    width: 200px;
+    height: 50px;
+    margin: 5px;
+    background-color: #c090ec;
+}
+
+
+
+.cards {
+    display: grid; /* Применяется к контейнеру, чтобы активировать Grid Layout для его дочерних элементов. */
+    grid-template-columns: repeat(3, 1fr); /* Три равные колонки */
+    grid-template-rows: 100px 200px; /* 2 строки: 100px и 200px высоты */
+    grid-template-columns: 1fr 2fr; /* 2 столбца: первый занимает 1 часть, второй 2 части свободного пространства */
+}
+
+/* В CSS Grid можно использовать именованные области (grid-template-areas), чтобы удобно описывать расположение элементов на странице. */
+.container {
+    display: grid;
+    grid-template-areas: 
+      "header header"
+      "sidebar content"
+      "footer footer";
+    grid-template-columns: 1fr 3fr; /* Левый блок уже, правый шире */
+    grid-template-rows: auto 1fr auto;     /* Высота строк */
+    gap: 10px;
+  }
+  
+  .header { grid-area: header; background: lightblue; }
+  .sidebar { grid-area: sidebar; background: lightgray; }
+  .content { grid-area: content; background: white; }
+  .footer { grid-area: footer; background: lightgreen; }
+  
+  .container > div {
+    padding: 20px;
+    border: 1px solid black;
+  }
+  
+  
