@@ -93,3 +93,42 @@
   .clearfix {
     clear: both; /* Очистка всех плавающих элементов */
 }
+
+.visible {
+    width: 500px;
+    border: 2px solid yellowgreen;
+}
+.visible div {
+    margin: 5px;
+    background-color: hotpink;
+    
+}
+.hidden {
+    display: none; /* Элемент не отображается */
+  }
+  
+  .block-element {
+    display: block; /* Элемент занимает всю ширину контейнера */
+  }
+  
+  .inline-element {
+    display: inline; /* Элемент занимает только свою ширину */
+  }
+  
+  .flex-container {
+    display: flex; /* Элемент становится флекс-контейнером */
+  }
+  
+  .grid-container {
+    display: grid; /* Элемент становится грид-контейнером */
+    grid-template-columns: repeat(5, 1fr); /* Три равные колонки */
+    background-color: #beff69 !important;
+  }
+/* display: none полностью убирает элемент из потока документа, как будто его нет, тогда как visibility: hidden делает элемент невидимым, но сохраняет его место на странице: */
+  .visiblity {
+    visibility: hidden; /* Элемент невидим, но занимает место в потоке */
+  }
+
+  .half-transparent {
+    opacity: 0.5; /* Элемент становится полупрозрачным */
+  }
